@@ -1,0 +1,105 @@
+@charset "utf-8";
+$black: rgb(41, 45, 51);
+$warning: rgb(241, 197, 14);
+$danger: rgb(238, 27, 36);
+$dark: rgb(85, 92, 102);
+.img-bg {
+  background: url(./assets/hero.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+textarea::placeholder,
+input::placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.ab {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+
+  & .bg-img {
+    width: 18rem;
+    height: 36rem;
+    background: red;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  & .img {
+    z-index: 6;
+    top: 0;
+    width: 27rem;
+    height: 33rem;
+    left: 0;
+    object-fit: cover;
+    margin: auto;
+    &::after {
+    }
+  }
+}
+.bg {
+  height: 650px;
+  width: 70%;
+  position: absolute;
+  right: 0;
+}
+.last-bg {
+  position: relative;
+  z-index: 5;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    max-width: 20rem;
+    transform: translate(-50%, -50%);
+    background: $warning;
+    z-index: -1;
+  }
+}
+
+.button.is-rounded {
+  border-radius: 50% !important;
+}
+
+.s-transparent {
+  background-color: transparent !important;
+  color: transparent !important;
+  font-size: 4rem;
+}
+.line-con {
+  position: relative;
+  overflow: hidden;
+}
+.line-bg {
+  height: 400px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 4px,
+    transparent 0,
+    transparent 22px
+  );
+}
+
+.last {
+  clip-path: polygon(0 0, 90% 0, 100% 8%, 0 85%);
+}
+.button {
+  border-radius: 0 !important;
+}
+.cover {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 5px solid black;
+}
+
+@import "../node_modules/bulma/bulma.sass";
