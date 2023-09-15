@@ -3,7 +3,7 @@ const About = () => {
   return (
     <div className='has-background-warning  m-0 pb-2'>
       <div className='container is-max-widescreen'>
-        <div className='columns is-vcentered  '>
+        <div className='columns is-vcentered  ' style={{overflow:"hidden"}}>
           <div className='column'>
             <div className='has-text-centered has-text-left-desktop section'>
               <h1 className='title has-text-black has-text-weight-bold'>
@@ -18,9 +18,11 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className='column pb-0'>
+          <div
+            className='column pb-0 overflow-hidden '
+            style={{ overflow: "hidden" }}>
             <div className=''>
-              <figure className='image section mb-0 pb-0'>
+              <figure className='image section pb-1'>
                 <img src={Person} alt='' width={400} />
               </figure>
             </div>
